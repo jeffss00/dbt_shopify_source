@@ -482,9 +482,9 @@ models:
       - name: _fivetran_synced
         description: "{{ doc('_fivetran_synced') }}"
 
- - name: stg_shopify__collection
-   description: Each record represents collection data within Shopify.
-   columns:
+  - name: stg_shopify__collection
+    description: Each record represents collection data within Shopify.
+    columns:
       - name: collection_id
         description: The unique numeric identifier for the shop.
       - name: handle
