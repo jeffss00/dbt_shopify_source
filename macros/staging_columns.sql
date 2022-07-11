@@ -285,3 +285,45 @@
 {{ return(columns) }}
 
 {% endmacro %}
+
+-- Macro for new tables: collection, collection_product, shop. Not comprehensive of all available columns
+
+{% macro get_collection_columns() %}
+
+{% set columns = [
+    {"name": "id", "datatype":  dbt_utils.type_numeric(), "alias": "collection_id"},
+    {"name": "handle", "datatype": dbt_utils.type_string()},
+    {"name": "title", "datatype": dbt_utils.type_string()}
+] %}
+
+{{ return(columns) }}
+
+{% endmacro %}
+
+{% macro get_collection_product_columns() %}
+
+{% set columns = [
+    {"name": "collection_id", "datatype":  dbt_utils.type_numeric()},
+    {"name": "product_id", "datatype":  dbt_utils.type_numeric()}
+] %}
+
+{{ return(columns) }}
+
+{% endmacro %}
+
+{% macro get_shop_columns() %}
+
+{% set columns = [
+    {"name": "id", "datatype":  dbt_utils.type_numeric(), "alias": "shop_id"},
+    {"name": "name", "datatype": dbt_utils.type_string(), "alias": "shop_name"},
+    {"name": "name", "datatype": dbt_utils.type_string()},
+    {"name": "timezone", "datatype": dbt_utils.type_string()},
+    {"name": "iana_timezone", "datatype": dbt_utils.type_string()},
+    {"name": "domain", "datatype": dbt_utils.type_string()},
+    {"name": "currency", "datatype": dbt_utils.type_string()},
+    {"name": "_fivetran_synced", "datatype": dbt_utils.type_timestamp()}
+] %}
+
+{{ return(columns) }}
+
+{% endmacro %}

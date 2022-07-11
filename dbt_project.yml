@@ -22,6 +22,9 @@ vars:
     transaction_source: "{{ source('shopify','transaction') }}"
     refund_source: "{{ source('shopify','refund') }}"
     order_adjustment_source: "{{ source('shopify','order_adjustment') }}"
+    collection_source: "{{ source('shopify','collection') }}"
+    collection_product_source: "{{ source('shopify','collection_product') }}"
+    shop_source: "{{ source('shopify','collection_product') }}"
     customer_pass_through_columns: []
     order_line_refund_pass_through_columns: []
     order_line_pass_through_columns: []
