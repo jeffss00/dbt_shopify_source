@@ -483,35 +483,35 @@ models:
         description: "{{ doc('_fivetran_synced') }}"
 
  - name: stg_shopify__collection
-        description: Each record represents collection data within Shopify.
-        columns:
-          - name: collection_id
-            description: The unique numeric identifier for the shop.
-          - name: handle
-            description: The handle of the collection.
-          - name: title
-            description: Title of the collection
+   description: Each record represents collection data within Shopify.
+   columns:
+    - name: collection_id
+      description: The unique numeric identifier for the shop.
+    - name: handle
+      description: The handle of the collection.
+    - name: title
+      description: Title of the collection
 
-      - name: stg_shopify__collection_product
-        description: Each record represents collection product data within Shopify.
-        columns:
-          - name: collection_id
-            description: The unique numeric identifier for the shop.
-          - name: product_id
-            description: The product id
+  - name: stg_shopify__collection_product
+    description: Each record represents collection product data within Shopify.
+    columns:
+      - name: collection_id
+        description: The unique numeric identifier for the shop.
+      - name: product_id
+        description: The product id
 
-      - name: stg_shopify__shop
-        description: Each record represents shop data within Shopify.
-        columns:
-          - name: id
-            description: The unique numeric identifier for the shop.
-          - name: name
-            description: The name of the shop.
-          - name: timezone
-            description: The timezone of the shop.
-          - name: iana_timezone
-            description: Standardized name of the timezone.
-          - name: domain
-            description: The domain address of the shop.
-          - name: _fivetran_synced
-            description: "{{ doc('_fivetran_synced') }}"
+  - name: stg_shopify__shop
+    description: Each record represents shop data within Shopify.
+    columns:
+      - name: id
+        description: The unique numeric identifier for the shop.
+      - name: name
+        description: The name of the shop.
+      - name: timezone
+        description: The timezone of the shop.
+      - name: iana_timezone
+        description: Standardized name of the timezone.
+      - name: domain
+        description: The domain address of the shop.
+      - name: _fivetran_synced
+        description: "{{ doc('_fivetran_synced') }}"
