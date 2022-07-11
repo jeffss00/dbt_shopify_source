@@ -485,12 +485,12 @@ models:
  - name: stg_shopify__collection
    description: Each record represents collection data within Shopify.
    columns:
-    - name: collection_id
-      description: The unique numeric identifier for the shop.
-    - name: handle
-      description: The handle of the collection.
-    - name: title
-      description: Title of the collection
+      - name: collection_id
+        description: The unique numeric identifier for the shop.
+      - name: handle
+        description: The handle of the collection.
+      - name: title
+        description: Title of the collection
 
   - name: stg_shopify__collection_product
     description: Each record represents collection product data within Shopify.
